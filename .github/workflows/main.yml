@@ -21,8 +21,8 @@ jobs:
         run: |
           npm install
 
-      - name: Install EAS CLI
-        run: npm install -g eas-cli
+      - name: Install EAS CLI (latest)
+        run: npm install -g eas-cli@latest
 
       - name: Build APK
         run: |
