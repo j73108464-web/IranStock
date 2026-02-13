@@ -1,31 +1,33 @@
-name: Build APK
-
-on:
-  push:
-    branches:
-      - main
+روی:
+  فشار دادن:
+    شاخه‌ها:
+      - اصلی
   workflow_dispatch:
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+مشاغل:
+  ساختن:
+    اجرا می‌شود: اوبونتو-آخرین نسخه
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    مراحل:
+      - نام: مخزن پرداخت
+        موارد استفاده: actions/checkout@v3
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+      - نام: راه‌اندازی Node.js
+        موارد استفاده: actions/setup-node@v3
+        با:
+          نسخه-گره: 18
 
-      - name: Install dependencies
-        run: npm install
+      - نام: نصب وابستگی‌ها
+        اجرا کنید: |
+          cd ./iranstock
+          npm install
 
-      - name: Install EAS CLI
-        run: npm install -g eas-cli
+      - نام: نصب EAS CLI
+        اجرا کنید: npm install -g eas-cli
 
-      - name: Build APK
-        run: eas build --platform android --profile preview --non-interactive
-        env:
+      - نام: ساخت APK
+        اجرا: |
+          cd ./iranstock
+          eas build --platform android --profile development --non-interactive
+        پاکت:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
