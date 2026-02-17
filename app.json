@@ -19,14 +19,14 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "ycom.iranstock.appcom.iranstock.app"
+      "bundleIdentifier": "com.iranstock.iranstockApp"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "ycom.iranstock.appcom.iranstock.app"
+      "package": "com.iranstock.iranstockApp"
     },
     "web": {
       "favicon": "./assets/icon.png"
